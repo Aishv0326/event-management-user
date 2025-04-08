@@ -1,0 +1,21 @@
+.body-content {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 40px;
+}
+
+.package-section {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.card {
+    text-align: center;
+  background-color: #fff;
+  /* border-radius: 10px; */
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}

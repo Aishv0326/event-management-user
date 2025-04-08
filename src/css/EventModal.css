@@ -1,0 +1,163 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-height: 80vh; /* Set max height to 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Form Styling */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.modal-close:hover {
+  color: #cc0000;
+}
+
+
+.modal-content label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.modal-content input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.create-btn {
+  background-color: #BB7;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 48%;
+  font-family: fantasy;
+}
+
+.cancel-btn {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 48%;
+  font-family: fantasy
+}
+
+.create-btn:hover {
+  background-color: #BB7;
+}
+
+.cancel-btn:hover {
+  background-color: #cc0000;
+}
+
+.services-multiselect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.service-option {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-option.selected {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.services-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.services-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.all-services-hover {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: max-content;
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  z-index: 999;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.services-text:hover .all-services-hover {
+  display: block;
+}
+
+.more-services {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .modal-content {
+    width: 90%;
+  }
+}

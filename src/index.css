@@ -1,0 +1,17 @@
+/* body {
+  background-image: linear-gradient(to top, #000000 0%, #a6c7ee 100%);
+  min-height: 100vh;
+} */
+
+/* body {
+  background-image: url('./assets/welcome-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+} */
+
+.card{
+  width: 400px;
+  border-radius: 218px;
+}

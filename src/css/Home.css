@@ -1,0 +1,43 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+h2, h3 {
+  color: #bb7272;
+  font-family: cursive;
+}
+
+.heading-style {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: cursive;
+}
+
+.card-container {
+  margin: 20px auto; 
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  padding: 10px;
+  width: 20%;
+  height: 150px;
+  background: #632b58;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.1);
+}

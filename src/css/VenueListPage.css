@@ -1,0 +1,31 @@
+.venue-container {
+padding: 2rem;
+}
+
+.heading-style {
+font-size: 1.8rem;
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+.venue-list {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+justify-content: center;
+}
+
+.venue-card {
+background: #fdfdfd;
+border: 1px solid #ddd;
+padding: 1rem 1.5rem;
+border-radius: 8px;
+width: 280px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+transition: all 0.2s ease-in-out;
+}
+
+.venue-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}

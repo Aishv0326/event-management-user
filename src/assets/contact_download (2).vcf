@@ -1,0 +1,15 @@
+ BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.1//EN
+N:Gupta;Muskan;;;
+FN:MuskanGupta 
+ORG:Tech Mindz;
+TITLE:Tech Mindz 
+EMAIL;type=INTERNET;type=WORK;type=pref:muskan@technologymindz.com 
+TEL;type=WORK;type=pref:8619709123 
+TEL;type=CELL: 
+TEL;type=HOME:8619709123 
+URL;type=pref:https://technologymindz.co/Tech-Mindz2 
+
+END:VCARD
+

@@ -1,0 +1,32 @@
+.events-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.event-list {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event-card {
+  width: 250px;
+  padding: 20px;
+  background: #295255;
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+select{
+  word-wrap: normal;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+}
