@@ -1,11 +1,9 @@
-import { useState, useEffect, React } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Navbar from "./Navbar";
 import firstImage from "../assets/beach-wedding.jpg";
 import secondImage from "../assets/desination-wedding.webp";
-import mandap from "../assets/mandap-photos.jpeg";
-import desitinationWedddingTo from "../assets/Destination_wedding_2.webp";
 import "../css/Dashboard.css";
 import PackageDetailsModal from "../components/PackageDetailsModal";
 
@@ -17,7 +15,7 @@ const Dashboard = () => {
   const [errorPackages, setErrorPackages] = useState(null);
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [showPackageModal, setShowPackageModal] = useState(false);
-
+  const navigate = useNavigate();
   const openModal = (pkg) => {
     setSelectedPackage(pkg);
     setShowPackageModal(true);
@@ -134,7 +132,6 @@ const Dashboard = () => {
             <div className="d-flex flex-wrap justify-content-center gap-4">
               {packages.map((pkg) => {
                 const shortDesc = pkg.description?.split(" ").slice(0, 10).join(" ") + "...";
-
                 return (
                   <div
                     key={pkg.id}
@@ -143,11 +140,15 @@ const Dashboard = () => {
                   >
                     <div className="card-body">
                       <h5 className="card-title m-3">{pkg.packageName}</h5>
+                      <h5 className="card-title m-3">{pkg.packageName}</h5>
                       <p className="card-text">{shortDesc}</p>
-                      <p><strong>Price:</strong> ₹{pkg.price}</p>
+                      <p><strong>Price:</strong> $ {pkg.price}</p>
                       <p><strong>Max Guests:</strong> {pkg.maxGuests}</p>
-                      <p><strong>Duration:</strong> {pkg.durationInHours} hrs</p>
-                      <button className="btn btn-primary btn-sm mt-2" onClick={() => openModal(pkg)}>
+                      <p><strong>Duration:</strong> {pkg.durationHours} hrs</p>
+                      {/* <button className="btn btn-primary btn-sm mt-2" onClick={() => openModal(pkg)}>
+                        View Details
+                      </button> */}
+                      <button className="btn btn-primary btn-sm mt-2" onClick={() => navigate(`/dashboard/package-details/${pkg.packageId}`)}>
                         View Details
                       </button>
                     </div>

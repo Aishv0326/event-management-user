@@ -60,7 +60,7 @@ const PackagePage = () => {
         {packages.map((pkg) => (
           <div key={pkg.packageId} className="package-card">
             <h3>{pkg.packageName}</h3>
-            <p>Price: ₹{pkg.price}</p>
+            <p>Price: ${pkg.price}</p>
             <p>Description: {pkg.description}</p>
             <p>Duration: {pkg.durationHours} hrs</p>
             <p>Max Guests: {pkg.maxGuests}</p>

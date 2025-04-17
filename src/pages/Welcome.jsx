@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../css/WelcomePage.css";
 import firstImage from "../assets/welcome-background.jpg";
 import secondImage from "../assets/wedding-chair.avif";
@@ -57,7 +57,7 @@ const WelcomePage = () => {
             backgroundColor: "#f8f8f8", 
             borderBottom: "1px solid #ddd" 
             }}>
-            <h2 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>Event Manager</h2>
+            <h2 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>WendyEventify</h2>
             <button
                 onClick={() => navigate("/login")}
                 style={{ 
