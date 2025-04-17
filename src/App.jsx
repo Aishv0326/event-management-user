@@ -25,6 +25,10 @@ import WelcomePage from "./pages/Welcome";
 import Package from "./pages/PackagePage";
 import BookedPackagesPage from "./pages/BookedPackagesPage";
 import VenueListPage from "./pages/VenueListPage";
+import ServicePricingPage from "./pages/ServicePricingPage";
+import PackageDetailsPage  from "./pages/PackageDetailsPage";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import PaymentCanceled from "./pages/PaymentCanceled";
 
 
 const PrivateRoute = ({ element, requiredRoles = [] }) => {
@@ -47,15 +51,20 @@ function App() {
         <Route path="/" element={<WelcomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/success" element={<PaymentSuccess />} />
+        <Route path="/canceled" element={<PaymentCanceled />} />     
 
         {/* Protected Routes */}
         <Route path="/dashboard" element={<PrivateRoute element={<Dashboard />} />}>
           <Route index element={<Home />} />
-          <Route path="event" element={<PrivateRoute element={<Event />} requiredRoles={[0]} />} />
+          <Route path="event" element={<PrivateRoute element={<Event />} />} />
+          <Route path="package-details/:id" element={<PrivateRoute element={<PackageDetailsPage />} />} />          
+          <Route path="booked-packages" element={<PrivateRoute element={<BookedPackagesPage />}/>} />
           <Route path="category" element={<PrivateRoute element={<Category />} requiredRoles={[0]} />} />
           <Route path="package" element={<PrivateRoute element={<Package />} requiredRoles={[0]} />} />
-          <Route path="booked-packages" element={<PrivateRoute element={<BookedPackagesPage />} requiredRoles={[0]} />} />
           <Route path="venues" element={<PrivateRoute element={<VenueListPage />} requiredRoles={[0]} />} />          
+          <Route path="service-price" element={<PrivateRoute element={<ServicePricingPage />} requiredRoles={[0]} />} />   
+           
         </Route>
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} />

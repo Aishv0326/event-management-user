@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <h2 className="logo">Event Manager</h2>
+        <h2 className="logo">WendyEventify</h2>
         <ul className="nav-links">
           <li>
             <Link to="/dashboard" className={location.pathname === "/dashboard" ? "active" : ""}>
@@ -26,40 +26,51 @@ const Navbar = () => {
           </li>
 
           {/* Only show for non-roleID 1 users */}
-          {roleID === 0 && (
             <>
+              {roleID === 0 && ( 
               <li>
                 <Link to="/dashboard/package" className={location.pathname === "/dashboard/package" ? "active" : ""}>
                   Package
                 </Link>
-              </li>              
+              </li> 
+              )}
+              {roleID === 0 && (             
               <li>
                 <Link to="/dashboard/category" className={location.pathname === "/dashboard/category" ? "active" : ""}>
                   Event Categories
                 </Link>
               </li>
+              )}
+              {roleID === 0 && (
               <li>
-                <Link to="/dashboard/venues" className={location.pathname === "/dashboard/event" ? "active" : ""}>
+                <Link to="/dashboard/venues" className={location.pathname === "/dashboard/venues" ? "active" : ""}>
                   Venue List
                 </Link>          
               </li>
-              {roleID === 0 && (
+              )}
+              
               <li>
                 <Link to="/dashboard/event" className={location.pathname === "/dashboard/event" ? "active" : ""}>
                   Booked Events
                 </Link>
               </li>
-              )}
+                        
+              <li>
+                <Link to="/dashboard/booked-packages" className={location.pathname === "/dashboard/booked-packages" ? "active" : ""}>
+                  Booked Packages
+                </Link>
+              </li>
+
               {roleID === 0 && (
                 
                 <li>
-                  <Link to="/dashboard/booked-packages" className={location.pathname === "/dashboard/booked-packages" ? "active" : ""}>
-                    Booked Packages
+                  <Link to="/dashboard/service-price" className={location.pathname === "/dashboard/service-price" ? "active" : ""}>
+                    Service Pricing
                   </Link>
                 </li>
               )}
             </>
-          )}
+          
 
           <li>
             <button className="btn btn-danger logout-btn" onClick={handleLogout}>
